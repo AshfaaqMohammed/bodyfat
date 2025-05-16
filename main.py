@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 import pickle
 
-file = open('bodyfat/bodyfatmodel1.pkl', 'rb')
+file = open('bodyfatmodel1.pkl', 'rb')
 rf = pickle.load(file)
 file.close()
 
@@ -31,4 +31,4 @@ def predict():
 
 if __name__ == '__main__':
     with app.app_context():
-        app.run(debug=True, port=5001)
+        app.run(debug=True, port=5000)

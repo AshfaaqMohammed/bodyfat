@@ -10,11 +10,15 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the app
 COPY main.py .
-COPY bodyfat.pkl .
-COPY Templates ./Templates
+COPY bodyfatmodel1.pkl .
+COPY templates ./templates
 
-# Expose Flask port
+ENV FLASK_APP=main.py
+ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_RUN_PORT=5000
+ENV FLASK_ENV=production
+
 EXPOSE 5000
 
 # Command to run the Flask app
-CMD ["python", "main.py"]
+CMD ["flask", "run"]
