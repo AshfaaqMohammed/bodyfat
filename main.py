@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 import pickle
 
-file = open('bodyfatmodel1.pkl', 'rb')
+file = open('bodyfat/bodyfatmodel1.pkl', 'rb')
 rf = pickle.load(file)
 file.close()
 

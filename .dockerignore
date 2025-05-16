@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+*.ipynb
+*.csv
+.venv/
+.idea/
